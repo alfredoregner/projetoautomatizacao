@@ -1,0 +1,176 @@
+// Comandos para manipulação do JSON
+// Acessar personagem: personagens[0]
+// Adicionar novo personagem:
+/*
+personagens.push({
+  "id": 16,
+  "nome": "Toby Flenderson",
+  "cargo": "RH",
+  "departamento": "RH",
+  "idade": 42,
+  "data_nascimento": "1979-02-10",
+  "email": "toby.flenderson@dundermifflin.com",
+  "ativo": true
+});
+*/
+// Alterar personagem:
+/*
+personagens.find(p => p.nome === "Pam Beesly").cargo = "Design Gráfico";
+*/
+// Excluir personagem:
+/*
+personagens = personagens.filter(p => p.nome !== "Ryan Howard");
+*/
+
+[
+  {
+    "id": 1,
+    "nome": "Michael Scott",
+    "cargo": "Gerente Regional",
+    "departamento": "Administração",
+    "idade": 45,
+    "data_nascimento": "1965-03-15",
+    "email": "michael.scott@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "nome": "Dwight Schrute",
+    "cargo": "Assistente do Gerente Regional",
+    "departamento": "Vendas",
+    "idade": 38,
+    "data_nascimento": "1977-01-20",
+    "email": "dwight.schrute@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "nome": "Jim Halpert",
+    "cargo": "Vendedor",
+    "departamento": "Vendas",
+    "idade": 32,
+    "data_nascimento": "1983-10-01",
+    "email": "jim.halpert@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 4,
+    "nome": "Pam Beesly",
+    "cargo": "Recepcionista",
+    "departamento": "Administração",
+    "idade": 30,
+    "data_nascimento": "1985-06-25",
+    "email": "pam.beesly@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "nome": "Stanley Hudson",
+    "cargo": "Vendedor",
+    "departamento": "Vendas",
+    "idade": 58,
+    "data_nascimento": "1960-08-14",
+    "email": "stanley.hudson@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 6,
+    "nome": "Kevin Malone",
+    "cargo": "Contador",
+    "departamento": "Financeiro",
+    "idade": 39,
+    "data_nascimento": "1976-04-29",
+    "email": "kevin.malone@dundermifflin.com",
+    "ativo": false
+  },
+  {
+    "id": 7,
+    "nome": "Angela Martin",
+    "cargo": "Contadora",
+    "departamento": "Financeiro",
+    "idade": 41,
+    "data_nascimento": "1983-11-07",
+    "email": "angela.martin@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "nome": "Phyllis Vance",
+    "cargo": "Vendedora",
+    "departamento": "Vendas",
+    "idade": 55,
+    "data_nascimento": "1969-07-10",
+    "email": "phyllis.vance@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 9,
+    "nome": "Meredith Palmer",
+    "cargo": "Fornecimento",
+    "departamento": "Suprimentos",
+    "idade": 50,
+    "data_nascimento": "1974-09-26",
+    "email": "meredith.palmer@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "nome": "Kelly Kapoor",
+    "cargo": "Representante de Atendimento ao Cliente",
+    "departamento": "Relacionamento",
+    "idade": 29,
+    "data_nascimento": "1986-02-05",
+    "email": "kelly.kapoor@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 11,
+    "nome": "Erin Hannon",
+    "cargo": "Recepcionista",
+    "departamento": "Administração",
+    "idade": 26,
+    "data_nascimento": "1989-03-12",
+    "email": "erin.hannon@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 12,
+    "nome": "Creed Bratton",
+    "cargo": "Qualidade",
+    "departamento": "Qualidade",
+    "idade": 60,
+    "data_nascimento": "1955-02-08",
+    "email": "creed.bratton@dundermifflin.com",
+    "ativo": true
+  },
+  {
+    "id": 13,
+    "nome": "Ryan Howard",
+    "cargo": "Estagiário",
+    "departamento": "Vendas",
+    "idade": 28,
+    "data_nascimento": "1987-05-11",
+    "email": "ryan.howard@dundermifflin.com",
+    "ativo": false
+  },
+  {
+    "id": 14,
+    "nome": "Jan Levinson",
+    "cargo": "Vice-presidente",
+    "departamento": "Corporativo",
+    "idade": 43,
+    "data_nascimento": "1981-01-03",
+    "email": "jan.levinson@dundermifflin.com",
+    "ativo": false
+  },
+  {
+    "id": 15,
+    "nome": "Holly Flax",
+    "cargo": "Recursos Humanos",
+    "departamento": "RH",
+    "idade": 37,
+    "data_nascimento": "1986-12-22",
+    "email": "holly.flax@dundermifflin.com",
+    "ativo": true
+  }
+]
