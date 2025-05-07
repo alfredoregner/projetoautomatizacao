@@ -63,5 +63,3 @@ Tipo de arquitetura adotada: Pub/Sub (Publicador/Assinante):
 O sistema foi projetado com base no padrão Pub/Sub, onde ações como o cadastro de um funcionário funcionam como eventos publicados, e a automação da inserção de dados no formulário atua como assinante desses eventos.
 
 A planilha Funcionarios.xlsx serve como canal de comunicação indireto, permitindo que componentes fiquem desacoplados e possam evoluir separadamente.
-
-Esse modelo favorece a escalabilidade e facilita a manutenção do projeto.
