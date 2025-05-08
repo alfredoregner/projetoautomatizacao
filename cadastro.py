@@ -66,16 +66,12 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     else:
         pyautogui.click(666,891, duration = 1)
 
-    pyperclip.copy(funcionario_status)
-    pyautogui.press('tab', interval = 0.5)
-    pyautogui.hotkey('ctrl', 'v')
-
     pyautogui.press('tab', interval = 0.5)
     pyautogui.press('enter', interval = 0.5)
     time.sleep(2)
     pyautogui.press('tab', interval = 0.5)
     pyautogui.press('enter', interval = 0.5)
-    
+
 # Limpando a tabela após realizar todos os cadastros
 pagina.delete_rows(2, 100)  # Encontrar uma forma de automatizar a identificação da última linha da tabela, para que seja tudo deletado automaticamente a partir da primeira linha com dados na tabela (2), até a última linha com dados preenchidos
 planilha.save('Funcionarios.xlsx')
