@@ -1,8 +1,11 @@
 Nomes dos Integrantes
 
 Alfredo Walter Regner Neto - PO
+
 Breno Luiz Raghianti Zein - Srum Master
+
 Carla Machado Miguel - PO
+
 Mathues Rodrigues Antonio - Dev Time
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
