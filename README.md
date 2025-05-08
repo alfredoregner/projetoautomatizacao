@@ -1,6 +1,7 @@
 Questioário Apresentação
 
 1. Como funciona o pip no Python e como ele foi utilizado no projeto?
+   
 O pip é o gerenciador de pacotes do Python. Ele permite instalar bibliotecas externas que não fazem parte da biblioteca padrão, facilitando a inclusão de funcionalidades específicas em projetos.
 
 No projeto apresentado, o pip foi utilizado para instalar as seguintes bibliotecas externas:
@@ -18,6 +19,7 @@ Além dessas, o projeto também utilizou a biblioteca time, que faz parte da bib
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Como foi feita a organização dos arquivos e pastas no projeto?
+   
 O projeto foi organizado com base nos seguintes elementos principais:
 
 Arquivos .py: códigos-fonte do sistema de atendimento virtual e automação de cadastros (como o script com o menu interativo e o script com pyautogui).
@@ -29,7 +31,8 @@ Arquivo .json/.py com personagens: representa uma simulação de manipulação d
 A estrutura pode ser representada assim:
 
 /projeto
-│
+
+
 ├── atendimento_virtual.py        # Script com menu de cadastro/edição
 
 ├── automacao_formulario.py       # Script com pyautogui para preencher formulário
@@ -41,7 +44,9 @@ A estrutura pode ser representada assim:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3. O que é arquitetura de software e como o grupo aplicou isso no projeto?
-Arquitetura de software é a estrutura organizacional fundamental de um sistema, incluindo seus componentes, suas relações e os princípios de projeto que orientam sua evolução. Em projetos simples, isso pode ser aplicado com organização modular, separação de responsabilidades e reutilização de código.
+   
+Arquitetura de software é a estrutura organizacional fundamental de um sistema, incluindo seus componentes, suas relações e os princípios de projeto que orientam sua evolução. 
+Em projetos simples, isso pode ser aplicado com organização modular, separação de responsabilidades e reutilização de código.
 
 No projeto, a arquitetura foi aplicada da seguinte forma:
 
