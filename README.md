@@ -11,7 +11,7 @@ pyautogui: para automação de interações com mouse e teclado, simulando o pre
 
 pyperclip: para copiar e colar textos corretamente (inclusive com acentuação), integrando-se com o pyautogui.
 
-Essas bibliotecas podem ser instaladas com: "pip install openpyxl pyautogui pyperclip"
+Essas bibliotecas podem ser instaladas com: "pip install, openpyxl, pyautogui, pyperclip"
 
 Além dessas, o projeto também utilizou a biblioteca time, que faz parte da biblioteca padrão do Python (ou seja, não precisa ser instalada com pip). Ela foi usada para controlar pausas no programa, criando esperas intencionais entre ações, como inputs do usuário e cliques automatizados, garantindo fluidez na interação e evitando falhas de sincronização.
 
@@ -31,8 +31,11 @@ A estrutura pode ser representada assim:
 /projeto
 │
 ├── atendimento_virtual.py        # Script com menu de cadastro/edição
+
 ├── automacao_formulario.py       # Script com pyautogui para preencher formulário
+
 ├── personagens_com_comandos.json # Lista de personagens para manipulação de dados
+
 └── Funcionarios.xlsx             # Planilha com os dados dos funcionários
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
