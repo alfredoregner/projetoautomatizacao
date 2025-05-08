@@ -1,3 +1,12 @@
+Nomes dos Integrantes
+
+Alfredo Walter Regner Neto - PO
+Breno Luiz Raghianti Zein - Srum Master
+Carla Machado Miguel - PO
+Mathues Rodrigues Antonio - Dev Time
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Questioário Apresentação
 
 1. Como funciona o pip no Python e como ele foi utilizado no projeto?
@@ -14,9 +23,10 @@ pyperclip: para copiar e colar textos corretamente (inclusive com acentuação),
 
 Essas bibliotecas podem ser instaladas com: "pip install, openpyxl, pyautogui, pyperclip"
 
-Além dessas, o projeto também utilizou a biblioteca time, que faz parte da biblioteca padrão do Python (ou seja, não precisa ser instalada com pip). Ela foi usada para controlar pausas no programa, criando esperas intencionais entre ações, como inputs do usuário e cliques automatizados, garantindo fluidez na interação e evitando falhas de sincronização.
+Além dessas, o projeto também utilizou a biblioteca time, que faz parte da biblioteca padrão do Python (ou seja, não precisa ser instalada com pip). 
+Ela foi usada para controlar pausas no programa, criando esperas intencionais entre ações, como inputs do usuário e cliques automatizados, garantindo fluidez na interação e evitando falhas de sincronização.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Como foi feita a organização dos arquivos e pastas no projeto?
    
@@ -41,7 +51,7 @@ A estrutura pode ser representada assim:
 
 └── Funcionarios.xlsx             # Planilha com os dados dos funcionários
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 3. O que é arquitetura de software e como o grupo aplicou isso no projeto?
    
