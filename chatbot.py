@@ -19,8 +19,8 @@ while atendimento < 1 and atendimento > 3:
 
 if atendimento == 1:
     # Coleta os dados que serão inseridos na planilha
-    cadastro_id = input('Insira o ID do funcionário')
-    time.slepp(0.5)
+    cadastro_id = input('Insira o ID do funcionário: ')
+    time.sleep(0.5)
     cadastro_nome = input('Insira o Nome do funcionário: ')
     time.sleep(0.5)
     cadastro_cargo = input('Insira o Cargo do funcionário: ')
@@ -61,7 +61,7 @@ elif atendimento == 2:
             #     editar = int(input('Insira sua opção: '))
 
             # Realizar a alteração de todos os campos de dados básicos do funcionário
-           # if editar == 1:
+        #if editar == 1:
             edicao_nome = input('Insira o Nome do funcionário: ')
             time.sleep(0.5)
             edicao_departamento = input('Insira o departamento do funcionário: ')
@@ -74,25 +74,21 @@ elif atendimento == 2:
             time.sleep(0.5)
             edicao_idade = input('Insira o cargo do funcionário: ')
             time.sleep(0.5)
-            edicao_id = input('Insira o cargo do funcionário: ')
-            time.sleep(0.5)
             edicao_nascimento= input('Insira o cargo do funcionário: ')
             time.sleep(0.5)
             
-
-
             # Insere os dados na planilha
-            rows[0].value = edicao_nome
-            rows[1].value = edicao_departamento
-            rows[2].value = edicao_email
-            rows[3].value = edicao_cargo
-            rows[4].value = edicao_ativo
-            rows[5].value = edicao_idade
-            rows[6].value = edicao_id
-            rows[7].value = edicao_nascimento
+            rows[1].value = edicao_nome
+            rows[2].value = edicao_cargo
+            rows[3].value = edicao_departamento
+            rows[4].value = edicao_idade
+            rows[5].value = edicao_nascimento
+            rows[6].value = edicao_email
+            rows[7].value = edicao_ativo
+            
             planilha.save('Funcionarios.xlsx') # Salva a planilha com os dados atualizados
 
-            print(f'Dados do funcionário {rows[0].value} alterados com sucesso!')
+            print(f'Dados do funcionário {rows[1].value} alterados com sucesso!')
 
             # Realizar a alteração de todos os campos de endereço do funcionário
             # elif editar == 2:
@@ -111,7 +107,7 @@ elif atendimento == 2:
             #     edicao_estado = input('Insira o Estado do endereço do funcionário: ')
             #     time.sleep(0.5)
 
-                 # Insere os dados na planilha
+                # Insere os dados na planilha
                 # rows[4].value = edicao_cep
                 # rows[5].value = edicao_rua
                 # rows[6].value = edicao_numero
