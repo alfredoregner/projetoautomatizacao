@@ -2,6 +2,8 @@ import pyautogui    # Biblioteca para realizar as ações dos equipamentos de en
 import time         # Biblioteca para configurar tempos de espera para a aplicação
 import openpyxl     # Biblioteca para realizar ações com excel dentro do programa
 import pyperclip    # Biblioteca para identificar caractere especiais nos campos da planilha
+import json
+import os
 
 # Formulário para cadastro dos funcionários, simulando a utilização de um sistema
 # https://docs.google.com/forms/d/e/1FAIpQLSduehX0b4pdnbk1PBPxqWrynw4ADLntbk9uadJ-FMBPR3qPhg/viewform
@@ -70,6 +72,18 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     pyautogui.press('tab', interval = 0.5)
     pyautogui.press('enter', interval = 0.5)
 
+
+    dados_json = {"id": f'{funcionario_id}', "nome": f'{funcionario_nome}', "cargo": f'{funcionario_cargo}', "departamento": f'{funcionario_departamento}', "idade": f'{funcionario_idade}', "data_nascimento": f'{funcionario_data_nascimento}', "email": f'{funcionario_email}'}
+
+    if os.path.exists('funcionarios.json'):
+        with open('funcionarios.json', 'r+', encoding='utf-8') as file:
+            dados = json.load(file)
+            dados.append(dados_json)
+            file.seek(0)
+            json.dump(dados, file, ensure_ascii=False, indent=4)
+    else:
+        with open('funcionarios.json', 'w', encoding='utf-8') as file:
+            json.dump([dados_json], file, ensure_ascii=False, indent=4)
 # Inserir os dados no arquivo "funcionarios.json"
 # Playlist para entender como manipular arquivo.json
 # https://www.youtube.com/watch?v=pM7EQKKs6Vg&list=PLZ6kIzk4n3uRmlJUAIwTLqMIIcgaR3uPa

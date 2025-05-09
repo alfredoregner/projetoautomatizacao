@@ -1,1 +1,11 @@
-{"funcionario": []}
+[
+    {
+        "id": "1",
+        "nome": "teste",
+        "cargo": "administração",
+        "departamento": "teste",
+        "idade": "teste",
+        "data_nascimento": "teste",
+        "email": "teste"
+    }
+]
