@@ -15,7 +15,6 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     time.sleep(2)
 
 # ID
-
     pyautogui.click(715,432, duration = 1)
     funcionario_id = linha[0].value
     pyperclip.copy(funcionario_id)
@@ -52,15 +51,14 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     pyautogui.press('tab', interval = 0.5)
     pyautogui.hotkey('ctrl', 'v')
 
-    # E-mail
+# E-mail
     funcionario_email = linha[6].value
     pyperclip.copy(funcionario_email)
     pyautogui.press('tab', interval = 0.5)
     pyautogui.hotkey('ctrl', 'v')
 
-    # Status
+# Status
     funcionario_status = linha[7].value
-
     if funcionario_status == 'Sim':
         pyautogui.click(668,851, duration = 1)
     else:
@@ -72,6 +70,10 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     pyautogui.press('tab', interval = 0.5)
     pyautogui.press('enter', interval = 0.5)
 
+# Inserir os dados no arquivo "funcionarios.json"
+# Playlist para entender como manipular arquivo.json
+# https://www.youtube.com/watch?v=pM7EQKKs6Vg&list=PLZ6kIzk4n3uRmlJUAIwTLqMIIcgaR3uPa
+    
 # Limpando a tabela após realizar todos os cadastros
 pagina.delete_rows(2, 100)  # Encontrar uma forma de automatizar a identificação da última linha da tabela, para que seja tudo deletado automaticamente a partir da primeira linha com dados na tabela (2), até a última linha com dados preenchidos
 planilha.save('Funcionarios.xlsx')
