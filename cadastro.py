@@ -17,7 +17,7 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     time.sleep(2)
 
 # ID
-    pyautogui.click(715,432, duration = 1)
+    pyautogui.click(769,452, duration = 1)
     funcionario_id = linha[0].value
     pyperclip.copy(funcionario_id)
     # pyautogui.press('tab', interval = 0.5)  # Troca para o próximo campo
@@ -59,12 +59,15 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     pyautogui.press('tab', interval = 0.5)
     pyautogui.hotkey('ctrl', 'v')
 
+    pyautogui.press('tab', interval = 0.5)
+    pyautogui.press('tab', interval = 0.5)  
+
 # Status
     funcionario_status = linha[7].value
-    if funcionario_status == 'Sim':
-        pyautogui.click(668,851, duration = 1)
+    if funcionario_status == 'true':
+        pyautogui.click(686,706, duration = 1)
     else:
-        pyautogui.click(666,891, duration = 1)
+        pyautogui.click(688,745, duration = 1)
 
     pyautogui.press('tab', interval = 0.5)
     pyautogui.press('enter', interval = 0.5)
