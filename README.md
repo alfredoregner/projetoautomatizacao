@@ -67,9 +67,9 @@ Deve ser executado os seguites comandos no prompt, para instalar as dependência
 
 4. Alterar posicionamento do mouse (caso necessário):
 Deve ser executado no prompt de comando, os seguintes comandos:
-``python
-from mouseinfo import mouseInfo
-mouseInfo()``
+``python``
+``from mouseinfo import mouseInfo``
+``mouseInfo()``
 
 Essa sequência de comandos abre um aplicativo nativo do python que exibe as informações do ponteiro do mouse. Pode ser utilizado para coletar os dados de coordenadas do ponteiro do mouse, para que seja atualizado no sistema e realizar as ações nos locais desejados
 
