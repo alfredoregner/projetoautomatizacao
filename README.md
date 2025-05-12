@@ -48,21 +48,30 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
 
 1. Clone o repositório:
 
-  ``git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio``
+  ``https://github.com/alfredoregner/projetoautomatizacao.git``
 
 2. Instale as dependências:
-Deve ser executado os seguitens comandos no prompt, para instalar as dependências necessárias para execução do projeto:
+Deve ser executado os seguites comandos no prompt, para instalar as dependências necessárias para execução do projeto:
 ``pip install openpyxl``
 ``pip install pyautogui``
 ``pip install pyperclip``
 ``pip install pywin32``
 
-5. Execute os scripts conforme a funcionalidade desejada:
 
-``python chatbot.py - Para realizar o cadastro de funcionários
-python cadastro.py - Para inserir os dados dentro do sistema
-python email.py - Para encaminhar mensagens de e-mail para os funcionários``
+3. Execute os scripts conforme a funcionalidade desejada:
+
+``chatbot.py - Para realizar o cadastro de funcionários``
+``cadastro.py - Para inserir os dados dentro do sistema``
+``email.py - Para encaminhar mensagens de e-mail para os funcionários``
+
+
+4. Alterar posicionamento do mouse (caso necessário):
+Deve ser executado no prompt de comando, os seguintes comandos:
+``python
+from mouseinfo import mouseInfo
+mouseInfo()``
+
+Essa sequência de comandos abre um aplicativo nativo do python que exibe as informações do ponteiro do mouse. Pode ser utilizado para coletar os dados de coordenadas do ponteiro do mouse, para que seja atualizado no sistema e realizar as ações nos locais desejados
 
 ---
 
