@@ -1,6 +1,6 @@
-# 🖥️ Automação de Tarefas Internas — *The Office Edition*
+# 🖥️ Automação de Tarefas Internas
 
-Este projeto tem como objetivo implementar soluções de **automação de processos internos** para um ambiente de escritório, utilizando os personagens da série *The Office* como base para simulação de dados e interações. A aplicação integra manipulação de arquivos, automação de formulários e simulação de um assistente virtual para tornar o ambiente de trabalho mais eficiente e divertido.
+Este projeto tem como objetivo implementar soluções de **automação de processos internos** para um ambiente de escritório. A aplicação integra manipulação de arquivos, automação de formulários e simulação de um assistente virtual para tornar o ambiente de trabalho mais eficiente.
 
 ---
 
@@ -27,8 +27,9 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
 - 📑 **Leitura e Escrita em Planilhas Excel** com `openpyxl`
 - 🧠 **Automação de Formulários** com `pyautogui` e `pyperclip`
 - 🤖 **Chatbot Simples** para interações com o usuário
-- 👨‍💼 **Gerenciamento de Funcionários** com dados baseados em personagens de *The Office*
+- 👨‍💼 **Gerenciamento de Funcionários**
 - 🧾 **Manipulação JSON** estruturada para cadastro e atualização de dados
+- 📧 **Disparo de E-mail** com 'win32com.client'
 
 ---
 
@@ -38,7 +39,7 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
 - [openpyxl](https://pypi.org/project/openpyxl/)
 - [pyautogui](https://pypi.org/project/PyAutoGUI/)
 - [pyperclip](https://pypi.org/project/pyperclip/)
-- Bibliotecas nativas: `time`, `json`
+- Bibliotecas nativas: `time`, `json`, `datetime`, `os`
 
 ---
 
@@ -49,46 +50,25 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
   ``git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio``
 
-3. Instale as dependências:
-4. 
-``pip install openpyxl pyautogui pyperclip``
+2. Instale as dependências:
+Deve ser executado os seguitens comandos no prompt, para instalar as dependências necessárias para execução do projeto:
+``pip install openpyxl``
+``pip install pyautogui``
+``pip install pyperclip``
+``pip install pywin32``
 
 5. Execute os scripts conforme a funcionalidade desejada:
 
-``python cadastro.py
-python chatbot.py
-python manipulacao_personagens_the_office.py``
-
----
-
-🧪 Exemplos de Comandos JSON
-A partir do arquivo personagens_com_comandos.json, é possível realizar:
-
-✅ Adição:
-
-``personagens.push({
-  id: 16,
-  nome: "Toby Flenderson",
-  cargo: "RH",
-  ...
-});``
-
----
-
-✏️ Alteração:
-
-``personagens.find(p => p.nome === "Pam Beesly").cargo = "Design Gráfico";``
-
-❌ Remoção:
-
-``personagens = personagens.filter(p => p.nome !== "Ryan Howard");``
+``python chatbot.py - Para realizar o cadastro de funcionários
+python cadastro.py - Para inserir os dados dentro do sistema
+python email.py - Para encaminhar mensagens de e-mail para os funcionários``
 
 ---
 
 🧩 Organização e Arquitetura
 
 O projeto foi modularizado em scripts com responsabilidades distintas:
-Separação por arquivos: automação, cadastro e chatbot independentes
+Separação por arquivos: chatbot de cadastro, automação e disparo de e-mail independentes
 Utilização de padrões simples: como Pub/Sub via arquivos externos (JSON/Excel)
 Facilidade de manutenção e expansão futura
 
@@ -96,4 +76,4 @@ Facilidade de manutenção e expansão futura
 
 📌 Considerações Finais
 
-Este projeto demonstra na prática como automação simples com Python pode trazer ganhos de produtividade, mesmo em ambientes pequenos. Além disso, a escolha de personagens de The Office como dados fictícios torna o processo mais divertido e pedagógico.
+Este projeto demonstra na prática como automação simples com Python pode trazer ganhos de produtividade, mesmo em ambientes pequenos.
