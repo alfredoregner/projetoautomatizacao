@@ -14,7 +14,7 @@ pagina = planilha['Funcionarios']
 
 # Acessando a linha 2 da planilha escolhida, para que comece a navegar entre as células, coletando as informações preenchidas
 for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir da segunda linha da tabela (a primeira não é necessária nesse caso pois é o cabeçalho do arquivo)
-    time.sleep(2)   # Tempo de espera até a próxima execução
+    time.sleep(3)   # Tempo de espera até a próxima execução
 
 # ID
     pyautogui.click(769,452, duration = 1)  # Realiza ação do mouse, encaminhando para o local indicado na coordenada
@@ -65,10 +65,10 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
 # Status
     funcionario_status = linha[7].value
     # Verifica o valor do status inserido na tabela, para movimentar o mouse para a opção desejada
-    if funcionario_status == 'true':
-        pyautogui.click(686,706, duration = 1)
+    if funcionario_status == 'ativo':
+        pyautogui.click(687,886, duration = 1)
     else:
-        pyautogui.click(688,745, duration = 1)
+        pyautogui.click(688,927, duration = 1)
 
     # Clica no botão "Enviar"
     pyautogui.press('tab', interval = 0.5)
@@ -79,7 +79,7 @@ for linha in pagina.iter_rows(min_row = 2):     # Coleta a informação a partir
     pyautogui.press('enter', interval = 0.5)
 
     # Coleta todos os dados e transforma em formato de lista para inserir no arquivo json
-    dados_json = {"id": f'{funcionario_id}', "nome": f'{funcionario_nome}', "cargo": f'{funcionario_cargo}', "departamento": f'{funcionario_departamento}', "idade": f'{funcionario_idade}', "data_nascimento": f'{funcionario_data_nascimento}', "email": f'{funcionario_email}'}
+    dados_json = {"id": f'{funcionario_id}', "nome": f'{funcionario_nome}', "cargo": f'{funcionario_cargo}', "departamento": f'{funcionario_departamento}', "idade": f'{funcionario_idade}', "data_nascimento": f'{funcionario_data_nascimento}', "email": f'{funcionario_email}', "status": f'{funcionario_status}'}
 
     # Verifica se o arquivo existe ou não
     if os.path.exists('funcionarios.json'):
