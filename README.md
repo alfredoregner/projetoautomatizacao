@@ -35,7 +35,7 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Python 3.x
+- Python 3.13.3
 - [openpyxl](https://pypi.org/project/openpyxl/)
 - [pyautogui](https://pypi.org/project/PyAutoGUI/)
 - [pyperclip](https://pypi.org/project/pyperclip/)
