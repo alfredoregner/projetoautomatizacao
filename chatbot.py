@@ -57,17 +57,8 @@ elif atendimento == 2:
     for rows in pagina.iter_rows(min_row=2, max_row=None):
         # Verificar se o ID é valido, e acessar a linha de cadastro desse funcionário
         if id_usuario == rows[0].value: 
-            # print('O que você deseja alterar?')
-            # print('1- Dados Básicos do Funcionário \n2- Endereço do Funcionário \n3- Função do Funcionário')
-            # editar = int(input('Insira sua opção: '))
-            
-            # while editar < 1 and editar > 3: 
-            #     print('Opção inválida!')
-            #     editar = input('1- Dados Básicos do Funcionário \n2- Endereço do Funcionário \n3- Função do Funcionário')
-            #     editar = int(input('Insira sua opção: '))
 
         # Realizar a alteração de todos dados do funcionário
-        #if editar == 1:
             time.sleep(0.5)
             edicao_nome = input('Insira o Nome do funcionário: ')
             time.sleep(0.5)
