@@ -1,27 +1,79 @@
-Nomes dos Integrantes
+# 🖥️ Automação de Tarefas Internas
 
-Alfredo Walter Regner Neto - PO
+Este projeto tem como objetivo implementar soluções de **automação de processos internos** para um ambiente de escritório. A aplicação integra manipulação de arquivos, automação de formulários e simulação de um assistente virtual para tornar o ambiente de trabalho mais eficiente.
 
-Breno Luiz Raghianti Zein - Srum Master
+---
 
-Carla Machado Miguel - PO
+## 👥 Equipe
 
-Mathues Rodrigues Antonio - Dev Time
+- **Alfredo Walter Regner Neto** – PO  
+- **Breno Luiz Raghianti Zein** – Scrum Master  
+- **Carla Machado Miguel** – PO  
+- **Matheus Rodrigues Antonio** – Dev Team  
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-Questioário Apresentação
+## 🎯 Objetivos
 
-1. Como funciona o pip no Python e como ele foi utilizado no projeto?
-O pip é o gerenciador de pacotes do Python, usado para instalar bibliotecas externas. No projeto, ele instalou as bibliotecas openpyxl, pyautogui e pyperclip, essenciais para manipular planilhas e automatizar formulários. A biblioteca time, por ser nativa, não precisou de instalação.
+- Reduzir tarefas repetitivas por meio de automação  
+- Simular um ambiente corporativo com dados fictícios realistas  
+- Treinar o uso de bibliotecas como `pyautogui`, `pyperclip`, `openpyxl` e `json`  
+- Criar uma interface simples de atendimento virtual com Python  
 
-2. Como foi feita a organização dos arquivos e pastas no projeto?
-O projeto foi organizado com scripts separados para o menu (atendimento_virtual.py) e automação (automacao_formulario.py), uma planilha Excel com os dados dos funcionários e um arquivo JSON de teste. Essa estrutura facilita a manutenção e a compreensão do código.
+---
 
-3. O que é arquitetura de software e como o grupo aplicou isso no projeto?
-Arquitetura de software é a estrutura e organização do sistema. O grupo aplicou isso com separação de responsabilidades entre scripts, modularidade e uso do padrão Pub/Sub, onde a planilha age como meio de comunicação entre os módulos de cadastro e automação.
+## 🚀 Funcionalidades
 
+- 📑 **Leitura e Escrita em Planilhas Excel** com `openpyxl`
+- 🧠 **Automação de Formulários** com `pyautogui` e `pyperclip`
+- 🤖 **Chatbot Simples** para interações com o usuário
+- 👨‍💼 **Gerenciamento de Funcionários**
+- 🧾 **Manipulação JSON** estruturada para cadastro e atualização de dados
+- 📧 **Disparo de E-mail** com 'win32com.client'
 
-Introdução do Projeto – Automação de Tarefas Internas
+---
 
-Este projeto tem como objetivo implementar soluções de automação para otimizar processos internos em um ambiente de escritório pequeno. A iniciativa busca reduzir tarefas manuais repetitivas, aumentar a eficiência operacional e melhorar a comunicação entre os colaboradores. Como ponto de partida, será desenvolvido um sistema simples de envio automático de lembretes, que notificará os funcionários sobre datas importantes e outros compromissos recorrentes, garantindo maior organização e pontualidade no dia a dia da empresa.
+## 🛠️ Tecnologias Utilizadas
+
+- Python 3.x
+- [openpyxl](https://pypi.org/project/openpyxl/)
+- [pyautogui](https://pypi.org/project/PyAutoGUI/)
+- [pyperclip](https://pypi.org/project/pyperclip/)
+- Bibliotecas nativas: `time`, `json`, `datetime`, `os`
+
+---
+
+## 🔧 Como Executar
+
+1. Clone o repositório:
+
+  ``git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio``
+
+2. Instale as dependências:
+Deve ser executado os seguitens comandos no prompt, para instalar as dependências necessárias para execução do projeto:
+``pip install openpyxl``
+``pip install pyautogui``
+``pip install pyperclip``
+``pip install pywin32``
+
+5. Execute os scripts conforme a funcionalidade desejada:
+
+``python chatbot.py - Para realizar o cadastro de funcionários
+python cadastro.py - Para inserir os dados dentro do sistema
+python email.py - Para encaminhar mensagens de e-mail para os funcionários``
+
+---
+
+🧩 Organização e Arquitetura
+
+O projeto foi modularizado em scripts com responsabilidades distintas:
+Separação por arquivos: chatbot de cadastro, automação e disparo de e-mail independentes
+Utilização de padrões simples: como Pub/Sub via arquivos externos (JSON/Excel)
+Facilidade de manutenção e expansão futura
+
+---
+
+📌 Considerações Finais
+
+Este projeto demonstra na prática como automação simples com Python pode trazer ganhos de produtividade, mesmo em ambientes pequenos.
