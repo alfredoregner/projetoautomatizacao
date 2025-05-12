@@ -40,6 +40,7 @@ Este projeto tem como objetivo implementar soluções de **automação de proces
 - [pyautogui](https://pypi.org/project/PyAutoGUI/)
 - [pyperclip](https://pypi.org/project/pyperclip/)
 - Bibliotecas nativas: `time`, `json`, `datetime`, `os`
+- Extensões utilizadas no Visual Studio Code: Python (Para executar arquivos Python), Python Debugger (Para fazer debug do código com melhor eficiência), Excel Viewer (Para visualizar a Planilha Excel utilizada dentro do Visual Studio)
 
 ---
 
