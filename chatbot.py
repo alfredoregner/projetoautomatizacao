@@ -1,7 +1,8 @@
 import time         # Biblioteca para configurar tempos de espera para a aplicação
 import openpyxl     # Biblioteca para realizar ações com excel dentro do programa
 
-print('Bem vindo ao Suporte da Maculados LTDA. Eu serei sua assistente virtual, estou pronta para te ajudar!')
+# Inicio da conversa
+print('Bem vindo(a). Eu serei sua assistente virtual, estou pronta para te ajudar!')
 print('Digite o número correspondente ao atendimento que deseja: ')
 print('1- Cadastro de Funcionário \n2- Edição de Cadastro \n3- Encerrar atendimento')
 atendimento = int(input('Insira sua opção: '))
@@ -11,12 +12,14 @@ time.sleep(1)
 planilha = openpyxl.load_workbook('Funcionarios.xlsx')
 pagina = planilha['Funcionarios']
 
+# Verifica se a resposta enviada foi correta para um dos atendimentos informados
 while atendimento < 1 and atendimento > 3:
     print('Opção inválida!')
     print('1- Cadastro de Funcionário \n2- Edição de Cadastro \n3- Encerrar atendimento')
     atendimento = int(input('Insira sua opção: '))
     time.sleep(1)
 
+# Cadastro de Funcionário
 if atendimento == 1:
     # Coleta os dados que serão inseridos na planilha
     cadastro_id = input('Insira o ID do funcionário: ')
@@ -29,7 +32,7 @@ if atendimento == 1:
     time.sleep(0.5)
     cadastro_idade = input('Insira o Idade do funcionário: ')
     time.sleep(0.5)
-    cadastro_nascimento = input('Insira a Data de Nascimeno do funcionário: ')
+    cadastro_nascimento = input('Insira a Data de Nascimeno (dd/mm/aaaa) do funcionário: ')
     time.sleep(0.5)
     cadastro_email = input('Insira o Email do funcionário: ')
     time.sleep(0.5)
@@ -42,9 +45,9 @@ if atendimento == 1:
 
     print(f'Dados do funcionário {cadastro_nome} cadastrados com sucesso!')
 
-
+# Edição de Cadastro de Funcionário
 elif atendimento == 2:
-    # Inserir o CPF do cadastro desejado para alteração
+    # Inserir o ID do cadastro desejado para alteração
     id_usuario = input('Insira o ID do funcionário que deseja alterar: ')
 
     
@@ -60,7 +63,7 @@ elif atendimento == 2:
             #     editar = input('1- Dados Básicos do Funcionário \n2- Endereço do Funcionário \n3- Função do Funcionário')
             #     editar = int(input('Insira sua opção: '))
 
-            # Realizar a alteração de todos os campos de dados básicos do funcionário
+        # Realizar a alteração de todos dados do funcionário
         #if editar == 1:
             edicao_nome = input('Insira o Nome do funcionário: ')
             time.sleep(0.5)
@@ -77,7 +80,7 @@ elif atendimento == 2:
             edicao_nascimento= input('Insira o cargo do funcionário: ')
             time.sleep(0.5)
             
-            # Insere os dados na planilha
+            # Insere os novos dados na planilha
             rows[1].value = edicao_nome
             rows[2].value = edicao_cargo
             rows[3].value = edicao_departamento
@@ -85,8 +88,9 @@ elif atendimento == 2:
             rows[5].value = edicao_nascimento
             rows[6].value = edicao_email
             rows[7].value = edicao_ativo
-            
-            planilha.save('Funcionarios.xlsx') # Salva a planilha com os dados atualizados
+
+            # Salva a planilha com os dados atualizados
+            planilha.save('Funcionarios.xlsx') 
 
             print(f'Dados do funcionário {rows[1].value} alterados com sucesso!')
 
@@ -133,12 +137,11 @@ elif atendimento == 2:
 
             # print(f'Dados de função do funcionário {rows[0].value} alterados com sucesso!')
         
+        # Caso o id sejá inválido
         else:
             print('ID Inválido')
             time.sleep(1)
 
+# Caso a opção desejada seja encerrar o contato
 else :
     print('Agradecemos pelo seu contato. Tenha um ótimo dia!')
-
-
-# Realizar refino no código
